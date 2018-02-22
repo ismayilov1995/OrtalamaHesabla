@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="25dp">
+
+    <AutoCompleteTextView
+        android:id="@+id/yeniDers"
+        android:layout_width="282dp"
+        android:layout_height="wrap_content"
+        android:popupBackground="@color/colorAccent"
+        android:backgroundTint="@android:color/transparent"
+        android:textColor="@android:color/white"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/btnSil"
+        android:layout_width="28dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/delete"
+        app:layout_constraintBottom_toBottomOf="@+id/yeniSpNot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/yeniDers"
+        app:layout_constraintTop_toTopOf="@+id/yeniDers" />
+
+    <Spinner
+        android:id="@+id/yeniSpKredi"
+        android:layout_width="152dp"
+        android:layout_height="37dp"
+        android:backgroundTint="@color/colorAccent"
+        android:entries="@array/tumKrediler"
+        android:popupBackground="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="@+id/yeniDers"
+        app:layout_constraintTop_toTopOf="@+id/yeniSpNot" />
+
+    <Spinner
+        android:id="@+id/yeniSpNot"
+        android:layout_width="110dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/colorAccent"
+        android:entries="@array/tumNotlar"
+        android:popupBackground="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@+id/yeniDers"
+        app:layout_constraintStart_toEndOf="@+id/yeniSpKredi"
+        app:layout_constraintTop_toBottomOf="@+id/yeniDers" />
+</android.support.constraint.ConstraintLayout>
